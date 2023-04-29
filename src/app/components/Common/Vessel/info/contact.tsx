@@ -40,6 +40,7 @@ function Contact(props: { ownerId: string | undefined }) {
     }
   }, []);
 
+  
   const userFirstName = () => {
     if (owner && owner.firstName) {
       return owner.firstName.charAt(0).toUpperCase() + owner.firstName.slice(1);
