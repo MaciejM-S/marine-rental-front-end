@@ -5,10 +5,15 @@ import Footer from "../components/Common/Footer";
 import NavBar from "../components/Common/Navbar";
 import { useAppDispatch } from "../hooks";
 import { changeMainNav } from "../../features/navigation/navigationSlice";
+import { baseUrl } from "../../features/baseUrl";
+import Loading from "./loading/loading";
 
 function MainBars() {
   const dispatch = useAppDispatch();
   const [changeFooter, setChangeFooter] = React.useState(false);
+  const [isServerRunning, setIsServerRunning] = React.useState(false);
+  const [loadingCounter, setLoadingCounter] = React.useState(0);
+
   useEffect(() => {
     if (window.location.pathname === "/home") {
       dispatch(changeMainNav(0));
@@ -19,6 +24,13 @@ function MainBars() {
     if (window.location.pathname === "/your-account") {
       dispatch(changeMainNav(2));
     }
+    fetch(baseUrl + "/isServerRunning")
+      .then((res) => res.json())
+      .then((r) => {
+        if (r.message === "running") {
+          setIsServerRunning(true);
+        }
+      });
   }, []);
   useEffect(() => {
     const handleScroll = (event: any) => {
@@ -36,10 +48,22 @@ function MainBars() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const counterInterval = setInterval(
+      () => {
+        setLoadingCounter(loadingCounter + 1);
+        clearInterval(counterInterval);
+        console.log("interval is working");
+      },
+      isServerRunning ? 90 : 1000
+    );
+  }, [loadingCounter]);
+
   return (
     <>
-      <NavBar />
-      <Outlet />
+      {loadingCounter < 100 ? null : <NavBar />}
+      {loadingCounter < 100 ? <Loading counter={loadingCounter} /> : <Outlet />}
       <Footer changeFooter={changeFooter} />
     </>
   );

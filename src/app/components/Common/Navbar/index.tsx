@@ -20,7 +20,6 @@ function NavBarContainer() {
     if (window.location.pathname === "/") {
       navigate("/home");
     }
-    console.log(window.location.pathname);
     if (window.location.pathname === "/home") {
       dispatch(changeMainNav(0));
     } else if (window.location.pathname === "/vessels") {
