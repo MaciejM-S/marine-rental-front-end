@@ -10,6 +10,7 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import { autoPlay } from "react-swipeable-views-utils";
 import { Box, Button } from "@mui/material";
 
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 type MainContainerProps = {
   vessels: VesselType[] | undefined;

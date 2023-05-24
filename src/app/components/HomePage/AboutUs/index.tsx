@@ -16,7 +16,7 @@ function AboutUs() {
     <>
       <Box sx={mainBoxStyle}>
         <Box sx={boxImageStyle}>
-          <img style={imgStyle} src={aboutUs} alt="" />
+          <img style={imgStyle} src={aboutUs} alt="jacht" />
         </Box>
         <Box sx={textBoxStyle}>
           <Typography component="h3" sx={titleStyle}>

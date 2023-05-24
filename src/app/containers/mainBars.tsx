@@ -52,11 +52,10 @@ function MainBars() {
   useEffect(() => {
     const counterInterval = setInterval(
       () => {
-        setLoadingCounter(loadingCounter + 1);
+       if(loadingCounter<100){setLoadingCounter(loadingCounter + 1)}
         clearInterval(counterInterval);
-        console.log("interval is working");
       },
-      isServerRunning ? 90 : 1000
+      isServerRunning ? 70 : 1000
     );
   }, [loadingCounter]);
 

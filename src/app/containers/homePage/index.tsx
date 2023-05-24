@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { theme } from "../../../theme/theme";
 import { Box } from "@mui/material";
 import Logo from "../../components/HomePage/MainFeed/mainLogo";
-import Button from "../../components/HomePage/MainFeed/button";
+import TopButton from "../../components/HomePage/MainFeed/button";
 import SearchBoatsSection from "../../components/HomePage/MainFeed/searchBoats";
 import BookingSteps from "../../components/HomePage/BookingSteps";
 import AboutUs from "../../components/HomePage/AboutUs";
@@ -40,7 +40,7 @@ function HomePage() {
       <Box sx={{ background: "#162753" }}>
         <Box sx={topBoxStyle}>
           <Logo />
-          <Button handleScroll={handleScroll} />
+          <TopButton handleScroll={handleScroll} />
         </Box>
         <Box>
           <SearchBoatsSection />
