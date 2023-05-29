@@ -23,14 +23,12 @@ function AboutUs() {
             Feel the best marine experience with our rental deals{" "}
           </Typography>
           <Typography component="h4" sx={descriptionStyle}>
-            We are a water equipment rental company based in Rhodos. Amet
-            consectetur adipisicing elit. Natus delectus et iure quia nisi,
-            inventore culpa similique accusantium ducimus architecto soluta sunt
-            aliquid dignissimos atque consequatur numquam dolorem nam omnis!
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam cum
-            rem qui cumque possimus, harum quia ipsa quaerat nostrum animi
-            corrupti debitis officia quidem, molestiae consectetur doloribus
-            voluptas, temporibus pariatur!{" "}
+            The user accounts and vessels added to the application are for
+            demonstration purposes only and not associated with real users or
+            products. They are used solely for demonstrating the functionality
+            of this application. Please note that any reservations or requests
+            made for these test boats will not be processed. We apologize for
+            any inconvenience caused.
           </Typography>
         </Box>
       </Box>

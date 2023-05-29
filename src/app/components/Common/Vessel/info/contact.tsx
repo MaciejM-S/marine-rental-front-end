@@ -86,12 +86,12 @@ function Contact(props: { ownerId: string | undefined }) {
       </Box>
 
       {owner?.telephone && (
-        <Box display={"flex"} sx={{[theme.breakpoints.down(400)]:{justifyContent:'center'} }}>
+        <Box display={"flex"} sx={{[theme.breakpoints.down(400)]:{justifyContent:'center', flexDirection:'column'} }}>
           <Typography>Telephone number:</Typography>
           <Typography sx={featureStyle}>{owner?.telephone}</Typography>
         </Box>
       )}
-      <Box display={"flex"} sx={{[theme.breakpoints.down(400)]:{justifyContent:'center'} }} >
+      <Box display={"flex"} sx={{[theme.breakpoints.down(400)]:{justifyContent:'center', flexDirection:'column'} }} >
         <Typography>Email:</Typography>
         <Typography sx={featureStyle}> {owner?.email}</Typography>
       </Box>
