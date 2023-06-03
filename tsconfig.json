@@ -28,4 +28,5 @@
     "./src/typings/index.d.ts",
     "./node_modules/@types/"
   ]
+  
 }
