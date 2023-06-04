@@ -12,6 +12,11 @@ import { theme } from "./theme/theme.js";
 import { ThemeProvider } from "@mui/material";
 
 function App() {
+  console.log = () => {};
+  console.error = () => {};
+  console.debug = () => {};
+  console.warn = () => {};
+
   return (
     <ThemeProvider theme={theme}>
       <>

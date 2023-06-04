@@ -58,6 +58,8 @@ function MainBars() {
       isServerRunning ? 70 : 1000
     );
   }, [loadingCounter]);
+  
+  console.error = console.warn = () => {};
 
   return (
     <>

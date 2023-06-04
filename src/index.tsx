@@ -12,6 +12,11 @@ if(process.env.NODE_ENV === 'production')disableReactDevTools()
 const container = document.getElementById("root")!;
 const root = createRoot(container);
 
+console.log = () => {}
+console.error = () => {}
+console.debug = () => {}
+console.warn = ()=>{}
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>
