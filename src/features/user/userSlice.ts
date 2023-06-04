@@ -156,7 +156,8 @@ export const userSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(authenticateUser.pending, (state) => {});
     builder.addCase(authenticateUser.fulfilled, (state, action) => {
-      state.authenticated = true;
+     if (action.payload.user){
+         state.authenticated = true;
       state._id = action.payload._id;
       state.avatar =action.payload.user&&action.payload.user.avatar
         ? action.payload.user.avatar
@@ -167,6 +168,8 @@ export const userSlice = createSlice({
       state.telephone = action.payload.user.telephone
         ? action.payload.user.telephone
         : null;
+     }
+   
     });
     builder.addCase(authenticateUser.rejected, (state, action) => {
       // state.error = action.error.message || "Something went wrong";
