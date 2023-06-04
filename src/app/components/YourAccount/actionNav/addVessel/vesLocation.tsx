@@ -13,7 +13,6 @@ function VesLocation() {
   const dispatch = useAppDispatch();
   const { location } = useAppSelector((state) => state.vessel);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(location);
     dispatch(addLocation(e.target.value));
   };
   return (

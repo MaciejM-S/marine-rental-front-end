@@ -121,7 +121,6 @@ export default function AddVessel() {
     setLoading(true);
     event.preventDefault();
     if (validate() === "validated") {
-      console.log("walidacja poprawna");
       let fd = new FormData();
       if (pictures) {
         for (const picture of pictures) {

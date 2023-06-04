@@ -25,7 +25,6 @@ type InfoProps = {
 };
 
 function Info(props: InfoProps) {
-  console.log(props.vessel);
   return (
     <>
       <Box sx={mainBoxStyle}>

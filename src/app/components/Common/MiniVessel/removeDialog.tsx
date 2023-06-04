@@ -24,7 +24,6 @@ export default function RemoveDialog(props: RemoveDialogType) {
   const dispatch = useAppDispatch();
   const [loading, setLoading] = React.useState(false);
   const handleRemove = () => {
-    console.log(props.id);
     props.handleClose();
     fetch(baseUrl+"/removeVessel/" + props.id, {
       method: "DELETE",

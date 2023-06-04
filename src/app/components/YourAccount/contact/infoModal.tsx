@@ -57,7 +57,6 @@ export default function InfoModal(props: AvatarProps) {
   }, [props.openInfo]);
   const focusTelephone = () => {
     if (props.user.telephone === null || props.user.telephone === "") {
-      console.log("dziala");
       setInfo({ ...info, telephone: "+" });
     }
   };

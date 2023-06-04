@@ -15,7 +15,6 @@ const { indexBoxStyle } = vesselStyle;
 
 function VesselProfile() {
   let { id, owner } = useParams();
-  console.log(owner);
   const [vessel, setVessel] = React.useState<VesselType | undefined>(undefined);
   const [loading, setLoading] = React.useState(false);
   React.useEffect(() => {

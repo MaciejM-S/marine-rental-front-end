@@ -24,7 +24,6 @@ export default function VesSize() {
   const { size } = useAppSelector((state) => state.vessel);
   const handleSize = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(addSize(e.target.value));
-    console.log(size);
   };
   return (
     <FormControl sx={formControlStyle}>

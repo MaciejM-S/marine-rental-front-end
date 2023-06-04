@@ -79,7 +79,6 @@ export const updateInfo = createAsyncThunk(
         } else throw new Error("not uploaded");
       })
       .catch((error) => {
-        console.log(error);
         return error.message;
       });
   }
@@ -178,7 +177,6 @@ export const userSlice = createSlice({
     builder.addCase(
       updateAvatar.fulfilled,
       (state, action: PayloadAction<any>) => {
-        console.log("it is updating");
         if (state && state.avatar) {
           state.avatar.blob = action.payload;
         }

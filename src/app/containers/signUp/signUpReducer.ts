@@ -231,7 +231,6 @@ export const reducer = (state: FeatureState, action: FeatureActions) => {
         },
       };
     case "emailExists":
-      console.log("emailExists");
       return {
         ...state,
         errors: {

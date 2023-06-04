@@ -28,12 +28,10 @@ function Contact(props: { ownerId: string | undefined }) {
 
   React.useEffect(() => {
     setLoading(true);
-    console.log(props.ownerId);
     if (props.ownerId) {
       fetch(baseUrl+"/vessel-contact/" + props.ownerId)
         .then((res) => res.json())
         .then((res) => {
-          console.log(res.contactCard);
           setLoading(false);
           setOwner(res.contactCard);
         });

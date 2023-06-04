@@ -15,6 +15,5 @@ export const authenticateUser: () => boolean | void = () => {
       }
     })
     .catch((error) => {
-      console.log(error);
     });
 };

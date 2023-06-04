@@ -39,7 +39,6 @@ export default function AvatarModal(props: AvatarProps) {
   const [helperText, setHelperText] = useState<string>("");
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target && e.target.files && e.target.files[0]) {
-      console.log(e.target.files[0]);
     }
     if (e.target && e.target.files) {
       if (e.target.files.length === 0) {

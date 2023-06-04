@@ -43,7 +43,6 @@ function Gallery(props: GalleryProps) {
   };
   const style = () => {
     if (window.innerWidth < 1000) {
-      console.log(window.innerHeight);
       return {
         textAlign: "center",
         boxShadow:
