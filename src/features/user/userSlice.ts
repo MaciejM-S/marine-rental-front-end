@@ -169,7 +169,7 @@ export const userSlice = createSlice({
         : null;
     });
     builder.addCase(authenticateUser.rejected, (state, action) => {
-      state.error = action.error.message || "Something went wrong";
+      // state.error = action.error.message || "Something went wrong";
     });
     builder.addCase(updateAvatar.pending, (state) => {
       state.loading = true;
