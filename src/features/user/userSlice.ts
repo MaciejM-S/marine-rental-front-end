@@ -158,7 +158,7 @@ export const userSlice = createSlice({
     builder.addCase(authenticateUser.fulfilled, (state, action) => {
       state.authenticated = true;
       state._id = action.payload._id;
-      state.avatar = action.payload.user.avatar
+      state.avatar =action.payload.user&&action.payload.user.avatar
         ? action.payload.user.avatar
         : null;
       state.firstName = action.payload.user.info.firstName;
