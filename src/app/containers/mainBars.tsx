@@ -55,7 +55,7 @@ function MainBars() {
        if(loadingCounter<100){setLoadingCounter(loadingCounter + 1)}
         clearInterval(counterInterval);
       },
-      isServerRunning ? 70 : 1000
+      isServerRunning ? 40 : 1000
     );
   }, [loadingCounter]);
   
